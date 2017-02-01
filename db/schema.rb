@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170130131445) do
+=======
+ActiveRecord::Schema.define(version: 20170201135920) do
+>>>>>>> challenge2
 
   create_table "messages", force: :cascade do |t|
     t.string   "name"
