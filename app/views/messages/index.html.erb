@@ -6,6 +6,7 @@
   <div class="panel-body">
     <% @messages.each do |message| %>
       <span class="label label-info"><%= message.name %></span>
+      <%= message.age%>
       <%= message.body %>
       (<%= link_to "edit" , edit_message_path(message) %>
        <%= link_to "destroy" , message , method: :delete, data: { confirm: '削除しても宜しいですか？' } %>)
@@ -15,18 +16,3 @@
 </div>
 
 <%= render 'form' %>
-
-<%= form_for(@message) do |f| %>
- <% if @message.errors.present? %>
-  <div class="alert alert-danger">
-   <%= alert %>
-    <ul>
-      <% @message.errors.full_messages.each do |full_message| %>
-        <li>
-         <%= full_message %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
- <% end %>
-<% end %>
